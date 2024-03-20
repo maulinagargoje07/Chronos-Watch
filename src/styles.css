@@ -79,6 +79,7 @@ body {
   font-size: 0.6rem;
   cursor: pointer;
   transition: all 0.8s ease;
+  position: relative;
 }
 
 .button--customize{
