@@ -84,7 +84,7 @@ async function setupViewer(){
 
     viewer.renderer.refreshPipeline()
 
-    await manager.addFromPath("./assets/drill3.glb")
+    await manager.addFromPath("./assets/Watch7.glb")
 
     const drillMaterial = manager.materials!.findMaterialsByName('Drill_01')[0] as MeshBasicMaterial2
 
@@ -92,9 +92,11 @@ async function setupViewer(){
 
     viewer.scene.activeCamera.setCameraOptions({controlsEnabled: false})
 
+    // viewer.scene.position.set(-2,-1.1,5.5)
+
     if (isMobile){
-        position.set(-3.5, -1.1, 5.5)
-        target.set(-0.8, 1.55, -0.7)
+        position.set(-5.54, -2.85, 9.97)
+        target.set(0.63,-1.37, -0.88)
         camera.setCameraOptions({ fov: 40 })
     }
 
@@ -109,7 +111,7 @@ async function setupViewer(){
         // FIRST SECTION
 
         tl
-        .to(position, {x: isMobile ? -6.0 : 1.56, y: isMobile ?  5.5 :  -2.26, z: isMobile ? -3.3 :  -3.85,
+        .to(position, {x: isMobile ? -6.0 : 3.96, y: isMobile ?  5.5 :  -3.46, z: isMobile ? -3.3 :  -8.22,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -124,7 +126,7 @@ async function setupViewer(){
                 end: "top 80%", scrub: 1,
                 immediateRender: false
         }})
-        .to(target, {x: isMobile ? -1.1 : -1.37, y: isMobile ? 1.0 : 1.99 , z: isMobile ? -0.1 : -0.37,
+        .to(target, {x: isMobile ? -1.1 : -1.41, y: isMobile ? 1.0 : 0.43 , z: isMobile ? -0.1 : -0.64,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -132,9 +134,9 @@ async function setupViewer(){
                 immediateRender: false
         }})
 
-        // LAST SECTION
+        // third SECTION
 
-        .to(position, {x: -3.4, y: 9.6, z: 1.71,
+        .to(position, {x: -10.52, y: 0.62, z: 0.18,
             scrollTrigger: {
                 trigger: ".third",
                 start:"top bottom",
@@ -142,7 +144,7 @@ async function setupViewer(){
                 immediateRender: false
         }, onUpdate})
 
-        .to(target, {x: -1.5, y: 2.13 , z: -0.4,
+        .to(target, {x: -0.096, y: -0.19 , z: -2.02,
             scrollTrigger: {
                 trigger: ".third",
                 start:"top bottom",
@@ -150,6 +152,24 @@ async function setupViewer(){
                 immediateRender: false
         }})
 
+
+        //last section
+         
+        .to(position, {x: -0.32, y: -0.77, z: 9.14,
+            scrollTrigger: {
+                trigger: ".fourth",
+                start:"top bottom",
+                end: "top top", scrub: true,
+                immediateRender: false
+        }, onUpdate})
+
+        .to(target, {x: 0.04, y: 0.199 , z: -0.32,
+            scrollTrigger: {
+                trigger: ".fourth",
+                start:"top bottom",
+                end: "top 50%", scrub: true,
+                immediateRender: false
+        }})
     }
 
     setupScrollanimation()
