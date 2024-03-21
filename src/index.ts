@@ -111,7 +111,7 @@ async function setupViewer(){
         // FIRST SECTION
 
         tl
-        .to(position, {x: isMobile ? -6.0 : 3.96, y: isMobile ?  5.5 :  -3.46, z: isMobile ? -3.3 :  -8.22,
+        .to(position, {x: isMobile ? 4.46 : 3.96, y: isMobile ?  -4.005 :  -3.46, z: isMobile ? -9.51 :  -8.22,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -126,7 +126,7 @@ async function setupViewer(){
                 end: "top 80%", scrub: 1,
                 immediateRender: false
         }})
-        .to(target, {x: isMobile ? -1.1 : -1.41, y: isMobile ? 1.0 : 0.43 , z: isMobile ? -0.1 : -0.64,
+        .to(target, {x: isMobile ? 0.18 : -1.41, y: isMobile ? -1.42 : 0.43 , z: isMobile ? -1.03 : -0.64,
             scrollTrigger: {
                 trigger: ".second",
                 start:"top bottom",
@@ -135,8 +135,8 @@ async function setupViewer(){
         }})
 
         // third SECTION
-
-        .to(position, {x: -10.52, y: 0.62, z: 0.18,
+       
+        .to(position, { x: isMobile ? -9.63 : -10.52, y: isMobile ?  0.37 :  0.62, z: isMobile ? -0.56 :  0.18,
             scrollTrigger: {
                 trigger: ".third",
                 start:"top bottom",
@@ -144,7 +144,15 @@ async function setupViewer(){
                 immediateRender: false
         }, onUpdate})
 
-        .to(target, {x: -0.096, y: -0.19 , z: -2.02,
+        .to(".section--two--container", { xPercent:'-150' , opacity:0,
+            scrollTrigger: {
+                trigger: ".third",
+                start:"top bottom",
+                end: "top 50%", scrub: 1,
+                immediateRender: false
+        }})
+       
+        .to(target, { x: isMobile ? 0.12: -0.096, y: isMobile ? -0.69 : -0.19 , z: isMobile ? 0.18 : -2.02,
             scrollTrigger: {
                 trigger: ".third",
                 start:"top bottom",
@@ -154,8 +162,8 @@ async function setupViewer(){
 
 
         //last section
-         
-        .to(position, {x: -0.32, y: -0.77, z: 9.14,
+        
+        .to(position, {x: isMobile ? -0.07: -0.32, y: isMobile ? -1.56 : -0.77 , z: isMobile ? 15.13 : 9.14,
             scrollTrigger: {
                 trigger: ".fourth",
                 start:"top bottom",
@@ -163,7 +171,15 @@ async function setupViewer(){
                 immediateRender: false
         }, onUpdate})
 
-        .to(target, {x: 0.04, y: 0.199 , z: -0.32,
+        .to(".section--third--container", { xPercent:'-150' , opacity:0,
+            scrollTrigger: {
+                trigger: ".fourth",
+                start:"top bottom",
+                end: "top 50%", scrub: 1,
+                immediateRender: false
+        }})
+        
+        .to(target, {x: isMobile ? 0.09: 0.04, y: isMobile ? -2.07 : 0.199 , z: isMobile ? 0.22 : -0.32,
             scrollTrigger: {
                 trigger: ".fourth",
                 start:"top bottom",
