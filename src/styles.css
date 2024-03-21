@@ -343,3 +343,55 @@ footer{
     margin-left: 7%;
   }
 }
+
+footer {
+  width: 100%;
+  height: 500px;
+  background: #A9AAAB;
+  display: flex;
+}
+
+.main-footer {
+  
+}
+
+.divider {
+  width: 100vw;
+  height: 3px;
+  background: #000;
+  margin: 20px 0;
+}
+
+.section1 {
+  width: 300px;
+  height: 95%;
+  margin: 20px;
+  margin-top: 50px;
+  margin-left: 70px;
+  float: left;
+}
+
+.section1 img {
+  width: 250px;
+}
+
+.section1 p {
+  font-weight: 600;
+}
+
+.button-ctc {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  width: 150px;
+  height: 50px;
+}
+
+.section2 {
+  width: 300px;
+  height: 95%;
+  margin: 20px;
+  margin-top: 50px;
+  margin-left: 70px;
+  float: left;
+}
